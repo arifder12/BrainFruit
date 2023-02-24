@@ -1,0 +1,51 @@
+import * as React from 'react';
+import { Text, View, StyleSheet, Image, TextInput, Button, TouchableOpacity } from 'react-native';
+
+import Constants from 'expo-constants';
+
+export default function HomeScreen({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <View style={{display: 'block'}}> 
+         <Image style={styles.image} source={require('../../assets/font/Ayobelajar.png')} 
+         style={{ width: 200, height:40, marginBottom: 50}}/>
+        
+        </View>
+        <TouchableOpacity
+          style={styles.buttonTenseStyle}
+          activeOpacity={0.5}
+          onPress={() => navigation.navigate('Materianggur')}>
+          <Image
+            source={require('../../assets/button/buttonmulai.png')}
+            style={{ width: 300, height: 50, marginBottom: 10, resizeMode:'contain'}}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.buttonTenseStyle}
+          activeOpacity={0.5}
+          onPress={() => navigation.navigate('Quizalpukat')}>
+          <Image
+            source={require('../../assets/button/buttonquiz.png')}
+            style={{ width: 300, height: 50, marginBottom: 10, resizeMode:'contain'}}
+          />
+        </TouchableOpacity>
+        
+        <Image  source={require('../../assets/gambarbawah.png')} 
+        style={{ width: '100%', height:200}}/>
+        
+        
+    </View>
+     
+    
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+    flex: '1',
+    justifyContent: 'center',
+    padding: 0,
+    backgroundColor: '#FFF9B6',
+  }
+});
