@@ -79,7 +79,7 @@ exports.findOne = async (req, res) => {
     try {
       const materi = await Materi.findByPk(id, { rejectOnEmpty: true })
       res.json({
-        message: `Quizzes retrieved successfully with id=${id}.`,
+        message: `Materi retrieved successfully with id=${id}.`,
         data: materi,
       });
     } catch (error) {
@@ -99,7 +99,7 @@ exports.getByCategoryId = async (req, res) => {
       }
     })
     res.json({
-      message: `Quizzes retrieved successfully with id=${id}.`,
+      message: `Materi retrieved successfully with id=${id}.`,
       data: materi,
     });
 }

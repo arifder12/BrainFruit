@@ -14,7 +14,7 @@ const db = require('./models')
 db.sequelize.sync()
 
 app.get('/', (req, res) => { 
-    res.send('Quiz ExpressJS API by Peika');
+    res.send('Quiz ExpressJS API by ripder');
 });
 
 app.use('/api/quiz', quizRoute)

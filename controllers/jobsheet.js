@@ -1,5 +1,5 @@
 const db = require("../models");
-const Quiz = db.quizzes;
+const Quiz = db.quiz;
 
 //submitOne: memproses jawaban dari satu quiz
 exports.submitOne = async (req, res) => {
@@ -19,7 +19,7 @@ exports.submitOne = async (req, res) => {
 
         if (req.body.answer == quiz.key) {
             res.status(200).json({
-                "message": "benar"
+                "message": "Jawabanmu benar"
             })
         } else {
             res.status(200).json({
